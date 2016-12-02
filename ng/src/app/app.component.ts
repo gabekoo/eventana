@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'Angular 2, Riding on Rails!2222';
   res;
   constructor(http: Http) {
-    http.get("/events").subscribe((res) => this.res)
+    http.get("/events").subscribe((res) => {
+      this.res = res;
+    });
   }
 }

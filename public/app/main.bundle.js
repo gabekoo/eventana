@@ -41962,7 +41962,9 @@ var AppComponent = (function () {
     function AppComponent(http) {
         var _this = this;
         this.title = 'Angular 2, Riding on Rails!2222';
-        http.get("/events").subscribe(function (res) { return _this.res; });
+        http.get("/events").subscribe(function (res) {
+            _this.res = res;
+        });
     }
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["G" /* Component */])({

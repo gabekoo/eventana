@@ -9,9 +9,12 @@ import 'rxjs/add/operator/map';
 })
 export class AppComponent {
   title = 'Angular 2, Riding on Rails!2222';
-  res;
+  events;
   constructor(http: Http) {
     http.get("/events").map(data => data.json())
-      .subscribe((data) => this.res = data);;
+      .subscribe((data) => {
+      console.log(data);
+      this.events = data;
+      });
   }
 }

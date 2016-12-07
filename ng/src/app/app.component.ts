@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Http } from "@angular/http";
-import 'rxjs/add/operator/map';
+
 
 @Component({
   selector: 'app-root',
@@ -8,13 +7,5 @@ import 'rxjs/add/operator/map';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular 2, Riding on Rails!2222';
-  events;
-  constructor(http: Http) {
-    http.get("/events").map(data => data.json())
-      .subscribe((data) => {
-      console.log(data);
-      this.events = data;
-      });
-  }
+  title = 'Angular 2, Riding on Rails!4321';
 }

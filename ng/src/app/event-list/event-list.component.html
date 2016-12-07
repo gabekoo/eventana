@@ -1,3 +1,10 @@
-<p>
-  event-list works!
-</p>
+<ul>
+    <li *ngFor="let event of events">
+        {{event.name}}
+        <ul>
+          <li> Time: {{event.time}} </li>
+          <li> Place: {{event.place}} </li>
+          <li *ngIf="event.max_people"> Maximum number of people: {{event.max_people}} </li>
+        </ul>
+    </li>
+</ul>
